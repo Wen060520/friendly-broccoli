@@ -59,12 +59,12 @@ static <T> T getOneById(String id, Class<T> clazz, Connection connection)
 
 ## 5. 运行
 
-```bash
-mvn clean test
-mvn exec:java
+```powershell
+.\mvnw.cmd clean test
+.\mvnw.cmd exec:java
 ```
 
-运行 `mvn exec:java` 后，控制台会依次展示学院表和学生表的插入、查询、更新、删除结果。
+运行 `.\mvnw.cmd exec:java` 后，控制台会依次展示学院表和学生表的插入、查询、更新、删除结果。
 
 ## 6. 切换到 MySQL
 
@@ -88,7 +88,7 @@ jdbc.password=你的密码
 $env:DB_URL="jdbc:mysql://localhost:3306/DateTest?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai"
 $env:DB_USERNAME="root"
 $env:DB_PASSWORD="你的密码"
-mvn exec:java
+.\mvnw.cmd exec:java
 ```
 
 ## 7. 项目结构
@@ -115,9 +115,9 @@ src/main/java/com/example/jdbc
 
 ## 9. 仓库地址
 
-本地 Git 仓库：`D:\java作业`
+本地仓库 URL：`file:///D:/java%E4%BD%9C%E4%B8%9A`
 
-远程仓库尚未配置时，可执行：
+远程仓库尚未配置，因此目前不能提供 GitHub/Gitee 地址。创建远程仓库后执行：
 
 ```bash
 git remote add origin <仓库URL>

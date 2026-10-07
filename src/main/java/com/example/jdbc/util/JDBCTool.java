@@ -209,11 +209,12 @@ public final class JDBCTool {
             throw new IllegalArgumentException("No @Id field in " + clazz.getName());
         }
 
+        Field resolvedIdField = idField;
         FieldMapping idMapping = mappings.stream()
-                .filter(mapping -> mapping.field().equals(idField))
+                .filter(mapping -> mapping.field().equals(resolvedIdField))
                 .findFirst()
                 .orElseThrow();
-        return new EntityMeta(tableName, idMapping.columnName(), idField, List.copyOf(mappings));
+        return new EntityMeta(tableName, idMapping.columnName(), resolvedIdField, List.copyOf(mappings));
     }
 
     private static <T> T newInstance(Class<T> clazz) throws SQLException {
