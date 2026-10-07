@@ -115,12 +115,10 @@ src/main/java/com/example/jdbc
 
 ## 9. 仓库地址
 
-本地仓库 URL：`file:///D:/java%E4%BD%9C%E4%B8%9A`
+GitHub 仓库 URL：`https://github.com/Wen060520/friendly-broccoli`
 
-远程仓库尚未配置，因此目前不能提供 GitHub/Gitee 地址。创建远程仓库后执行：
+克隆项目：
 
 ```bash
-git remote add origin <仓库URL>
-git branch -M main
-git push -u origin main
+git clone https://github.com/Wen060520/friendly-broccoli.git
 ```
